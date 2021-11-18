@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Consultar CEP";
+}
+
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        <form>
+            @Html.AntiForgeryToken()
+            <div class="input-group mb-3">
+                <input type="text" name="cep" id="txtCep" class="form-control" placeholder="CEP" aria-label="CEP" aria-describedby="consultar-cep">
+                <div class="input-group-append">
+                    <button class="btn btn-danger" type="button" id="consultar-cep">Consultar</button>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary btn-sm" type="button" id="cepConsultado">Listar Cep</button>
+                </div>
+            </div>
+        </form>
+    </div> 
+</div> 
+
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        <div class="card" style="display: none;">
+            <div class="card-header">
+                Endereço
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <span id="end"></span> <br>
+                    <span id="bairro"></span> <br>
+                    <span id="cidade"></span> <br>
+                    <span id="cep"></span> <br>
+                    <span id="comple"></span>
+                </p>
+            </div> 
+        </div> 
+    </div> 
+</div> 
+
+<div class="container border-bottom" style="display: none;">
+    <div class="row">
+        <div class="col" id="cep">
+            Cep
+        </div>
+        <div class="col" id="end">
+            Endereço
+        </div>
+        <div class="col" id="bairro">
+            Bairro
+        </div>
+        <div class="col" id="cep">
+            Cidade
+        </div>
+        <div class="col" id="comple">
+            Complemento
+        </div>
+    </div>
+</div>
